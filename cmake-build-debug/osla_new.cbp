@@ -1,0 +1,705 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="osla_new"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/hejisheng/Zhytek/Smarc/apps/osla-5/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/hejisheng/Zhytek/Smarc/apps/osla-5/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/hejisheng/Zhytek/Smarc/apps/osla-5/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/hejisheng/Zhytek/Smarc/apps/osla-5/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/hejisheng/Zhytek/Smarc/apps/osla-5/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/hejisheng/Zhytek/Smarc/apps/osla-5/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/hejisheng/Zhytek/Smarc/apps/osla-5/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/hejisheng/Zhytek/Smarc/apps/osla-5/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/hejisheng/Zhytek/Smarc/apps/osla-5/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/hejisheng/Zhytek/Smarc/apps/osla-5/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/hejisheng/Zhytek/Smarc/apps/osla-5/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/hejisheng/Zhytek/Smarc/apps/osla-5/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="osla_new">
+				<Option output="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/cmake-build-debug/osla_new" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/."/>
+					<Add directory="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/include"/>
+					<Add directory="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/3rdparty"/>
+					<Add directory="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/controller"/>
+					<Add directory="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/build/QT/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/hejisheng/Zhytek/Smarc/apps/osla-5/cmake-build-debug/Makefile&quot;  VERBOSE=1 osla_new"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/hejisheng/Zhytek/Smarc/apps/osla-5/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/hejisheng/Zhytek/Smarc/apps/osla-5/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/hejisheng/Zhytek/Smarc/apps/osla-5/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="osla_new/fast">
+				<Option output="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/cmake-build-debug/osla_new" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/."/>
+					<Add directory="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/include"/>
+					<Add directory="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/3rdparty"/>
+					<Add directory="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/controller"/>
+					<Add directory="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/build/QT/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/hejisheng/Zhytek/Smarc/apps/osla-5/cmake-build-debug/Makefile&quot;  VERBOSE=1 osla_new/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/hejisheng/Zhytek/Smarc/apps/osla-5/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/hejisheng/Zhytek/Smarc/apps/osla-5/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/hejisheng/Zhytek/Smarc/apps/osla-5/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/cmdparse/AccountList.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/cmdparse/AccountList.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/cmdparse/BookingList.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/cmdparse/BookingList.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/cmdparse/CalendarList.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/cmdparse/CalendarList.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/cmdparse/Command.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/cmdparse/Command.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/cmdparse/EntrustList.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/cmdparse/EntrustList.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/cmdparse/GlobalConfig.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/cmdparse/GlobalConfig.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/cmdparse/HeartBeat.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/cmdparse/HeartBeat.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/cmdparse/InstrumentDetail.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/cmdparse/InstrumentDetail.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/cmdparse/ReservationList.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/cmdparse/ReservationList.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/cmdparse/SessionOperation.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/cmdparse/SessionOperation.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/cmdparse/SyncDeviceCaptureEvent.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/cmdparse/SyncDeviceCaptureEvent.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/cmdparse/SyncEntrustEvent.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/cmdparse/SyncEntrustEvent.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/cmdparse/SyncFtpEvent.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/cmdparse/SyncFtpEvent.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/cmdparse/SyncSession.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/cmdparse/SyncSession.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/cmdparse/SyncSystemEvent.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/cmdparse/SyncSystemEvent.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/cmdparse/SyncUserEvent.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/cmdparse/SyncUserEvent.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/cmdparse/SyncUserInTraining.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/cmdparse/SyncUserInTraining.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/cmdparse/TempCardBindingList.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/cmdparse/TempCardBindingList.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/cmdparse/Unbinding.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/cmdparse/Unbinding.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/cmdparse/UserList.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/cmdparse/UserList.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/cmdparse/UserRightList.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/cmdparse/UserRightList.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/controller/Base/GlobalData.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/controller/Base/GlobalData.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/controller/Base/NormalTools.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/controller/Base/NormalTools.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/controller/Base/SmallDefine.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/controller/Base/ftp.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/controller/Base/ftp.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/controller/Context/AdminAction.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/controller/Context/AdminAction.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/controller/Context/BookInformation.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/controller/Context/BookInformation.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/controller/Context/CASConnection.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/controller/Context/CASConnection.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/controller/Context/CardReader.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/controller/Context/CardReader.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/controller/Context/HeartBeatUsbNet.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/controller/Context/HeartBeatUsbNet.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/controller/Context/InstrumentStatus.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/controller/Context/InstrumentStatus.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/controller/Context/NetConnectionManage.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/controller/Context/NetConnectionManage.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/controller/Context/PowerDelay.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/controller/Context/PowerDelay.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/controller/Context/ReservationInformation.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/controller/Context/ReservationInformation.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/controller/Context/SerialPort.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/controller/Context/SerialPort.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/controller/Context/ServiceEvent.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/controller/Context/ServiceEvent.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/controller/Context/SessionManage.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/controller/Context/SessionManage.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/controller/Context/SupportFeature.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/controller/Context/SupportFeature.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/controller/Context/UsbNetConnection.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/controller/Context/UsbNetConnection.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/controller/Context/UserInformation.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/controller/Context/UserInformation.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/controller/Context/WindowContext.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/controller/Context/WindowContext.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/controller/Service/SslService.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/controller/Service/SslService.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/controller/UI/AdminDialog.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/controller/UI/AdminDialog.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/controller/UI/EntrustBeginDialog.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/controller/UI/EntrustBeginDialog.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/controller/UI/EntrustEndDialog.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/controller/UI/EntrustEndDialog.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/controller/UI/MainWindow.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/controller/UI/MainWindow.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/controller/UI/MessageBox.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/controller/UI/MessageBox.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/controller/UI/QSqlQueryCheckboxModel.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/controller/UI/QSqlQueryCheckboxModel.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/controller/UI/ScheduleDialog.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/controller/UI/ScheduleDialog.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/controller/UI/ScreenSaver.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/controller/UI/ScreenSaver.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/controller/UI/SettingsDialog.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/controller/UI/SettingsDialog.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/controller/UI/TableViewDialog.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/controller/UI/TableViewDialog.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/controller/main.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/deviceinfo/enum.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/deviceinfo/rc522.c">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/deviceinfo/rc522.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/deviceinfo/tq2440.c">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/deviceinfo/tq2440.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/deviceinfo/typedef.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/deviceinfo/version.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/ftp/QTFtpBase.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/ftp/QTFtpBase.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/ftp/QTFtpInfo.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/ftp/QTFtpInfo.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/ftp/QTFtpTools.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/ftp/QTFtpTools.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/imframe/InputWidgetH.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/imframe/InputWidgetH.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/imframe/InputWidgetNum.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/imframe/InputWidgetNum.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/imframe/InputWidgetV.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/imframe/InputWidgetV.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/imframe/imframe.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/imframe/imframe.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/object/BaseObject.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/object/BaseObject.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/object/BaseObjectExt.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/object/BaseObjectExt.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/object/NonCopyAble.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/object/Public.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/object/RegisterObject.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/object/RegisterObject.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/object/RegisterOperation.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/protobuf/message.pb.cc">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/protobuf/message.pb.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/splashframe/splashframe.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/splashframe/splashframe.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/sqlworker/TableBaseInfo.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/sqlworker/sqlworker.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/sqlworker/sqlworker.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/sslconnection/ClientContext.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/sslconnection/ClientContext.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/sslconnection/Frame.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/sslconnection/Frame.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/sslconnection/FrameTools.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/sslconnection/FrameTools.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/sslconnection/Sequence.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/sslconnection/Sequence.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/sslconnection/SslConnection.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/sslconnection/SslConnection.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/sslconnection/Tools.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/test/BeepOperation.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/test/BeepOperation.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/test/SpeakerOperation.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/test/SpeakerOperation.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/test/main.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/test/mainwindow.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/test/mainwindow.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/test/ui_mainwindow.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/tools/ConvertFrameObject.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/tools/FrameOkError.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/tools/FrameOkError.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/tools/IniParse.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/tools/IniParse.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/tools/PublicDefine.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/tools/PublicDefine.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/tools/WatchDog.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/tools/WatchDog.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/tools/common.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/tools/common.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/tools/log.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/tools/log.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/ui_AdminDialog.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/ui_EntrustBeginDialog.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/ui_EntrustEndDialog.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/ui_InputWidgetH.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/ui_InputWidgetNum.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/ui_InputWidgetV.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/ui_MainWindow.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/ui_SettingsDialog.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/ui_TableViewDialog.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/wizard/ConfirmPage.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/wizard/ConfirmPage.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/wizard/DownloadPage.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/wizard/DownloadPage.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/wizard/InstrumentPage.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/wizard/InstrumentPage.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/wizard/LanguagePage.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/wizard/LanguagePage.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/wizard/NetchoicePage.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/wizard/NetchoicePage.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/wizard/NetworkPage.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/wizard/NetworkPage.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/wizard/Public.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/wizard/RegisterSslService.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/wizard/RegisterSslService.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/wizard/SetupWizard.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/wizard/SetupWizard.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/wizard/TcpConnection.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/wizard/TcpConnection.h">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/wizard/main.cpp">
+			<Option target="osla_new"/>
+		</Unit>
+		<Unit filename="/Users/hejisheng/Zhytek/Smarc/apps/osla-5/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

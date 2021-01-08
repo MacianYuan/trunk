@@ -1,0 +1,7 @@
+
+QMAKE_UIC=/home/lwp/work/osla-5/05.software/osla-5/trunk/build/QT/bin/uic
+QMAKE_RCC=/home/lwp/work/osla-5/05.software/osla-5/trunk/build/QT/bin/rcc
+QMAKE_MOC=/home/lwp/work/osla-5/05.software/osla-5/trunk/build/QT/bin/moc
+QMAKE_INCDIR_QT=/home/lwp/work/osla-5/05.software/osla-5/trunk/build/QT/include
+QMAKE_LIBDIR_QT=/home/lwp/work/osla-5/05.software/osla-5/trunk/build/QT/lib
+

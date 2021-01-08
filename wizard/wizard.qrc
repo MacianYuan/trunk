@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/wait.gif</file>
+        <file>images/check.png</file>
+        <file>lang/wizard_en_US.qm</file>
+        <file>lang/wizard_zh_CN.qm</file>
+        <file>images/btn_yu.png</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,519 @@
+﻿//============================================================================
+// 文件描述: 客户端与服务器SSL通信中的消息定义，基于google protobuf协议
+//
+// 文件作者: 张志达 (zdzhang@gmail.com)
+// 创建日期: 2012/10/28
+// 修改日期: 2018/22/06
+// 当前版本: v2.4
+// 更新历史:
+// v2.4: 增加远程升级参数和升级计划
+// v2.3: GlobalConfig里新增client_software_auto_update
+// v2.2: InstrumentBinding里bind项改为枚举option
+//       InstrumentDetail里新增client_software_update_version
+//       GlobalConfig里新增client_software_update_url
+// v2.1: Heartbeat里timestamp分成client_timestamp和server_timestamp
+// v2.0: GlobalConfig去掉exceptional_using_time，新增working_time
+// v1.9: Session里新增user_right项，penaltyflag改名penalty_flag；
+//       UserEvent里card_type_id改为card_type，action_type_id改为
+//       action_type，action_result_id改为action_result；
+//       SystemEvent里event_type_id改为event_type（即枚举项统一不加_id）
+// v1.8: 新增CalendarList；UserEvent里card_type改为card_type_id
+// v1.7: 新增Calendar和GlobalConfig，原Event拆分为UserEvent和SystemEvent；
+//       InstrumentBinding里新增一个bool项表明是绑定还是解除绑定；
+//       UserInTraining里user_id改为required
+// v1.6: Session和Event里的instrument_id改为required
+// v1.5: ClientSession改名Session，ClientSessionList改名SessionList
+//       ClientEvent改名Event，ClientEventList改名EventList
+// v1.4: 去掉InstrumentDetail里的AdminID，将Heartbeat里client_state的类型改为int32
+// v1.3: 增加UserRight和UserRightList两个消息，将User消息里的right相关项独立出来
+// v1.2: 调整Command_Option枚举的数值使其非零；增加用户临时资格及有效期
+// v1.0: 初稿
+//============================================================================
+
+// 用于C++: 使用命名空间 biotech::osla
+package biotech.osla;
+
+// 用于Java
+option java_package = "com.slark.pengder.protocol";
+option java_outer_classname = "MessageProtos";
+
+// 使用Lite版Protobuf
+option optimize_for = LITE_RUNTIME;
+
+// 消息类型编码
+enum MessageType {
+    HEARTBEAT = 1;
+    COMMAND = 2;
+    INSTRUMENT = 3;
+    INSTRUMENTLIST = 4;
+    INSTRUMENTBINDING = 5;
+    INSTRUMENTDETAIL = 6;
+    RESERVATION = 7;
+    RESERVATIONLIST = 8;
+    USER = 9;
+    USERLIST = 10;
+    ACCOUNT = 11;
+    ACCOUNTLIST = 12;
+    USERRIGHT = 13;
+    USERRIGHTLIST = 14;
+    TEMPCARDBINDING = 15;
+    TEMPCARDBINDINGLIST = 16;
+    BOOKING = 17;
+    BOOKINGLIST = 18;
+    SESSION = 19;
+    SESSIONLIST = 20;
+    USERINTRAINING = 21;
+    USERINTRAININGLIST = 22;
+    USEREVENT = 23;
+    USEREVENTLIST = 24;
+    SYSTEMEVENT = 25;
+    SYSTEMEVENTLIST = 26;
+    CALENDAR = 27;
+    CALENDARLIST = 28;
+    GLOBALCONFIG = 29;
+        FTPEVENT = 30;
+        FTPEVENTLIST = 31;
+    SESSION_OPERATION_REQ_CMD = 33;
+    SESSION_OPERATION_REP_CMD = 34;
+    INIT_PHASE = 35;
+    DEVICE_CAPTURE_EVENT = 36;
+    DEVICE_CAPTURE_EVENT_LIST = 37;
+    ENTRUST = 38;
+    ENTRUST_LIST = 39;
+    ENTRUST_EVENT = 40;
+    ENTRUST_EVENT_LIST = 41;
+
+    //远程升级用
+    UPGRADE_PARAMS = 42;
+    UPGRADE_PLAN =43;
+    //用户资格权限
+    TINSQUACFG_DATA=44;
+}
+
+//============================================================================
+// 客户端<==>服务器 消息
+//============================================================================
+
+// 用户列表
+message TinsQuaList {
+    repeated TinsQuaConfig tinsQuas = 1;
+}
+
+//用户资格权限
+message TinsQuaConfig {
+    required int32 id = 1;
+    required bool type = 2;
+    optional string orgNum = 3;
+    required int32 instrumentId= 4;
+    required int32 quaId = 5;
+    required bool workTime = 6;
+    required int32 status = 7;
+}
+
+// 心跳包
+message Heartbeat {
+    required int32 client_timestamp = 1;    // 客户端时间戳
+    required int32 server_timestamp = 2;    // 服务器时间戳
+    optional int32 instrument_id = 3;       // 仪器ID
+    optional int32 client_state = 4;        // 客户端状态
+    optional string org_code = 5; //学院编码
+}
+
+
+// 初始化阶段信息
+message InitPhase {
+    enum Option {
+        CLIENT_INIT_REQ = 1;   // 客户端初始化请求
+        SERVER_DEVICE_INIT_DONE = 2; // 服务器发送设备列表结束
+        SERVER_INIT_DONE = 3;  // 服务器初始化完成
+    }
+    required Option option = 1; // 命令参数
+    optional string bind_code = 2; //绑定时使用的code
+}
+
+// 通用指令
+message Command {
+    enum Option {
+        // 客户端使用
+        CLIENT_RECV_OK = 11;    // 客户端接收正确
+        CLIENT_RECV_ERR = 12;   // 客户端接收错误
+        CLIENT_PARSE_ERR = 13;   // 客户端处理正确
+        CLIENT_PARSE_OK = 14;   // 客户端处理错误
+        // 服务器使用
+        SERVER_RECV_OK = 21;    // 服务器接收正确
+        SERVER_RECV_ERR = 22;   // 服务器接收错误
+        SERVER_PARSE_OK = 23;   // 服务器处理正确
+        SERVER_PARSE_ERR = 24;   // 服务器处理错误
+    }
+    required Option option = 1;             // 命令参数
+}
+
+//============================================================================
+// 服务器==>客户端 消息
+//============================================================================
+
+// 仪器
+message Instrument {
+    required int32 id = 1;                  // 仪器ID
+    required string name = 2;               // 仪器名称
+    required string org_code = 3;           // 学院编码,new 170524
+}
+
+// 仪器列表
+message InstrumentList {
+    repeated Instrument instrument = 1;
+}
+
+// 仪器绑定
+message InstrumentBinding {
+    required int32 instrument_id = 1;       // 仪器ID
+    required string client_mac_addr = 2;    // 客户端MAC地址
+    required int32 client_model = 3;        // 客户端型号
+    required string client_version = 4;     // 客户端版本
+    enum Option {
+        REQUEST_BINDING = 0;    // 请求绑定
+        CONFIRM_BINDING = 1;    // 确认绑定
+        RELEASE_BINDING = 2;    // 解除绑定
+    }
+    required Option option = 5;
+    optional string bindCode = 6;  /// 绑定时使用的编码
+}
+
+// 仪器详细参数
+message InstrumentDetail {
+    required int32 id  = 1;                 // 仪器ID
+    required string name = 2;               // 仪器名称
+    required int32 status = 3;              // 仪器状态
+    required int32 min_interval = 4;        // 最小可预约时间段
+    required int32 booking_holding_time = 5;// 预约保护时间
+    required int32 alert_time = 6;          // 使用超时提醒时间
+    optional int32 off_delay_time = 7;      // 断电延时时间
+    optional int32 min_off_time = 8;        // 最短重上电时间
+    optional int32 alert_current = 9;       // 报警电流
+    optional string client_software_update_version = 10; // 客户端软件最新版本号
+    optional int32 booking_break_time = 11; // 违约时间
+    optional bool looseMode = 12;           // 宽松模式
+    optional string working_time = 13;      // 工作时间问题
+    optional int32 bookingModelID = 14;     // 预约模式
+    optional string terImgUrl = 15;         // 二维码地址
+}
+
+// 仪器专享时间
+message Reservation {
+    required int32 id = 1;                  // 时间段ID
+    required int32 group_id = 2;            // 课题组ID
+    required int32 week = 3;                // 星期
+    required int32 start_time = 4;          // 开始时间
+    required int32 end_time = 5;            // 结束时间
+    required int32 active_time = 6;         // 生效时间
+    required int32 expire_time = 7;         // 失效时间
+    optional int32 delete_time = 8;         // 删除时间
+}
+
+// 仪器专享时间列表
+message ReservationList {
+    repeated Reservation reservation = 1;
+}
+
+// 用户
+message User {
+    required int32 id = 1;                  // 用户ID
+    required int32 status = 2;              // 用户状态
+    required string first_name = 3;         // 用户名字
+    required string last_name = 4;          // 用户姓氏
+    required string phone = 5;              // 用户电话
+    optional string card_serial = 6;         // 用户一卡通序列号
+    optional int32 account_id = 7;          // 用户当前账户ID
+    required int32 isblack = 8; // 是否黑名单
+    optional int32 penaltyStopStart = 9;  // 罚停开始时间
+    optional int32 penaltyStopEnd = 10;   // 罚停结束时间
+}
+
+// 用户列表
+message UserList {
+    repeated User user = 1;
+}
+
+// 账户
+message Account {
+    required int32 id = 1;                  // 账户ID
+    required int32 status = 2;              // 账户状态
+    required int32 group_id = 3;            // 账户所属课题组
+    required int32 deposit = 4;             // 账户余额
+    required int32 credit = 5;              // 信用额度
+    required int32 credit_temp = 6;         // 临时信用额度
+    required int32 credit_temp_expire_time = 7; // 临时信用额度失效时间
+}
+
+// 账户列表
+message AccountList {
+    repeated Account accout = 1;
+}
+
+// 用户资格表
+message UserRight {
+    required int32 user_id = 1;
+    required int32 right = 2;               // 用户在本仪器上的资格
+    required int32 right_temp = 3;          // 用户的临时资格
+    //required int32 right_temp_expire_time = 4; // 用户临时资格失效时间
+}
+
+message UserRightList {
+    repeated UserRight user_right = 1;
+}
+
+// 临时卡关联
+message TempCardBinding {
+    required string card_serial = 1;         // 卡号
+    required int32 user_id = 2;             // 用户
+    required int32 active_time = 3;         // 生效时间
+    required int32 expire_time = 4;         // 失效时间
+        optional int32 id = 5;                  // 临时卡ID，重构新增
+}
+
+// 临时卡关联列表
+message TempCardBindingList {
+    repeated TempCardBinding temp_card_binding = 1;
+}
+
+// 预约记录
+message Booking {
+    required int32 id = 1;                  // 预约ID
+    required int32 user_id = 2;             // 用户ID
+    required int32 start_time = 3;          // 开始时间
+    required int32 end_time = 4;            // 结束时间
+    required int32 type = 5;                // 预约类型
+    required int32 status = 6;              // 预约状态
+    optional bool isTips = 7;              // 是否播报了预约即将结束
+    optional bool isEnd = 8;               // 预约时间是否使用完毕
+}
+
+// 预约记录列表
+message BookingList {
+    repeated Booking booking = 1;
+}
+
+// 系统日历
+message Calendar {
+    required int32 day = 1;                 // 日期 示例20170524
+    required bool is_holiday = 2;           // 是否节假日
+    optional int32 id = 3;                  // 日历ID
+}
+
+// 系统日历列表
+message CalendarList {
+    repeated Calendar calendar = 1;
+}
+
+// 3代机-全局配置信息
+message GlobalConfig {
+    required int32 account_deposit_limit = 1;        // 账户余额提醒线
+    //required int32 valid_training_check_in_time = 2; // 培训报名有效时间
+    //optional string client_software_update_url = 4;  // 客户端软件更新地址
+    //optional int32 client_software_auto_update = 5;  // 客户端软件是否自动更新
+    optional string ftp_host = 2;                   // Ftp 地址
+    optional string ftp_port = 3;                   // Ftp 端口
+    optional string ftp_user_name = 4;              // Ftp 用户名
+    optional string ftp_passwd = 5;                 // Ftp 密码
+    optional string ftp_root_url = 6;               // Ftp 根目录
+    optional int32 ServiceTime = 7;                 // ntp更新时间间隔，单位：秒
+    optional int32 CaptureTime = 8;                 // 采集器采集数据的时间间隔，单位：秒
+    optional string working_time = 9;               // 工作时间,私有使用
+    optional bool payment_account_enable = 10;     // true:启用付款账户;false:停用付款账户
+    optional string value1 = 11;
+    optional string value2 = 12;
+    optional string value3 = 13;
+    optional string value4 = 14;
+    optional string value5 = 15;
+    optional string value6 = 16;
+}
+
+//============================================================================
+//
+// 客户端==>服务器 消息
+//
+//============================================================================
+
+// 使用记录
+message Session {
+    required int64 id = 1;                  // 记录ID
+    required int32 start_time = 2;          // 开始时间
+    required int32 end_time = 3;            // 结束时间
+    required int32 type = 4;                // 使用类型
+    required int32 user_id = 5;             // 用户ID
+    required string card_serial = 6;         // 卡号
+    required int32 user_right = 7;          // 用户资格
+    required int32 account_id = 8;          // 关联账户ID
+    required int32 group_id = 9;            // 关联课题组ID
+    optional int32 booking_id = 10;         // 关联预约记录ID
+    required bool penalty_flag = 11;        // 是否需要惩罚
+    required int32 instrument_id = 12;      // 仪器ID
+    optional int32 long_time_right = 13;     // 用户长期权限
+}
+
+// 使用记录列表
+message SessionList {
+    repeated Session session = 1;
+}
+
+// 培训用户
+message UserInTraining {
+    required int64 session_id = 1;          // 使用记录ID
+    required string card_serial = 2;         // 卡号
+    required int32 user_id = 3;             // 用户ID
+    required int32 check_in_time = 4;       // 签到时间
+    optional int32 rowid = 5;               // 主键ID
+}
+
+// 培训用户列表
+message UserInTrainingList {
+    repeated UserInTraining user_in_training = 1;
+}
+
+// 刷卡机用户事件
+message UserEvent {
+    required int64 id = 1;                  // 事件记录ID
+    required int32 user_id = 2;             // 用户ID
+    optional int32 group_id = 3;            // 用户课题组ID
+    required string card_serial = 4;         // 卡号
+    required int32 card_type = 5;           // 卡类型
+    required int32 action_type = 6;         // 动作类型
+    required int32 action_result = 7;       // 动作结果
+    required int32 create_time = 8;         // 发生时间
+    required int32 instrument_id = 9;       // 仪器ID
+}
+
+// 刷卡机用户事件列表
+message UserEventList {
+    repeated UserEvent user_event = 1;
+}
+
+// 刷卡机系统事件表
+message SystemEvent {
+    required int64 id = 1;                  // 事件记录ID
+    required int32 event_type = 2;          // 事件类型
+    optional int64 event_content = 3;       // 事件内容
+    required int32 create_time = 4;         // 发生时间
+    required int32 instrument_id = 5;       // 仪器ID
+}
+
+// 刷卡机系统事件列表
+message SystemEventList {
+    repeated SystemEvent system_event = 1;
+}
+
+// 文件上传ftp状态
+enum FTP_FILE_UPLOAD_STATUS {
+    FTP_FILE_UPLOAD_SUCCESS= 0;    // 上次文件成功
+    FTP_FILE_UPLOAD_FAIL = 1;      // 上传文件失败
+}
+
+// 文件上传至ftp信息
+message FtpFileUpload {
+        required string path = 1;                     // ftp路径
+        required string file_name = 2;                // 文件名
+    required FTP_FILE_UPLOAD_STATUS status = 3;   // 文件状态
+    required int32 consume_time = 4;              // 上传该文件使用总时间
+        required int64 file_size = 5;                 // 文件大小
+        required string create_time = 6;              // 文件生成时间
+        optional int32 percentage = 7;                // 文件上传百分比
+    optional int32 localid = 8;
+}
+
+// 客户端上传文件信息
+message FtpEvent {
+    required int64 id = 1;                  // 事件记录ID
+    required int32 user_id = 2;             // 用户ID
+        required int32 instrument_id  = 3;      // 仪器ID
+        required int32 group_id = 4;            // 用户是在组
+        required int32 actived_account = 5;     // 用户付款账户
+    repeated FtpFileUpload file = 6;        // 文件状态，一个用户，一次上传多个文件
+    optional int32 localId= 7;              // 存储本地id，用于回调
+}
+
+message FtpEventList {
+    repeated FtpEvent ftp_event = 1;
+}
+
+// 设备采集器采集的数据
+message DeviceCaptureEvent {
+    required int64 id = 1;                  // 事件记录ID
+    required int32 instrumentId = 2;        // 设备ID
+    required string deviceName = 3;         // 设备名称
+        required string deviceValue = 4;        // 设备数据
+        required int32 captureTime = 5;         // 采集时间
+}
+
+message DeviceCaptureEventList {
+    repeated DeviceCaptureEvent device_capture_event = 1;
+}
+
+// 开始结束回话操作
+message SessionOpertaionReq {
+        required int32 id = 1;                  // 数据库主键
+        required int32 user_id = 2;             // 用户ID
+        required string card_serial = 3;         // 卡号
+        required int32 user_role = 4;           // 用户角色
+        required int32 operation_type = 5;      // 8 上机，1 下机
+}
+
+message SessionOpertaionRep {
+        required int32 id = 1;                  // 数据库主键
+        required int32 status = 2;              // 状态数据
+        required int32 BookingId = 3;           // 是否预约 0：无，1：有
+}
+
+// 委托记录
+message Entrust {
+    required int32 id = 1;                  // 委托ID
+    required int32 user_id = 2;             // 用户ID
+    required string title = 3;              // 委托名
+    required int32 status = 4;              // 委托状态 1：已提交 2：待确定 3：已确定 4：未执行 5：未完成 6：已完成
+    required int32 is_doing = 5;            // 是否试验中 0 ,1
+}
+
+// 委托记录列表
+message EntrustList {
+    repeated Entrust entrust = 1;
+}
+
+// 委托事件表
+message EntrustEvent {
+    required int64 id = 1;             // 事件记录ID
+    required int32 entrust_id = 2;     // 委托id
+    required int32 status = 3;         // 委托状态
+    optional int32 is_doing = 4;       // 是否试验中
+    required int64 session_id = 5;     // 会话ID
+    optional Session sessionInfo = 6;  // 会话信息
+}
+
+// 委托事件列表
+message EntrustEventList {
+    repeated EntrustEvent entrust_event = 1;
+}
+
+//升级参数
+message UpgradeParams {
+    required bool enable = 1;           //有效升级参数；true：升级参数是有效的。false：升级参数是无效的(禁止升级)。
+    required bool force_upgrade = 2;    //true:终端即使有未上传的使用记录，也执行更新；false：若终端有未上传使用记录，则不允许更新
+    required string new_ver = 3;        //升级包的版本。版本格式必须为x.x.x。其中x为数字，例如：4.0.0
+    required string from_ver = 4;       //可以升级的终端程序最低版本，低于此版本的终端程序不会被升级。版本格式必须为x.x.x。其中x为数字，例如：4.0.0
+    required int32 size = 5;            //升级包大小
+    required int32 adler32 = 6;         //adler32校验值
+    required string url = 7;            //存放升级包的地址。这个地址必须是HTTP服务器上的地址。
+                                        //实际地址为：再这个地址后加上：?token=加密&insid=仪器ID
+                                        //加密由MD5(MAC地址+仪器ID)计算而得，格式为:"AA:BB:CC:DD:EE:FF01234567890"
+    optional string reversed1 = 8;      //保留1
+    optional string reversed2 = 9;      //保留2
+}
+
+//升级计划
+message UpgradePlan {
+    required int32 type = 1;            //0：取消计划；1：每隔“更新检查间隔时间x”检查，能否下载和更新。
+                                        //实际检查间隔时间是：更新检查间隔时间x+(仪器ID%120)
+                                        //2：立即执行升级
+    required int64 start_date = 2;       //从1970-01-01 00:00:00.000开始的毫秒数
+    required int32 interval = 3;        //升级检查间隔时间x。单位：分钟。例如：60，表示每小时检查能否升级
+    optional string reversed1 = 4;      //保留1
+}
+

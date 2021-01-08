@@ -1,0 +1,13 @@
+make
+cp controller/controller ../../../filesys/filesys-labim-5/usr/bin/controller
+cp wizard/wizard ../../../filesys/filesys-labim-5/usr/bin/wizard
+#cp test/testforsmarc ../../../filesys/filesys-labim-5/usr/bin/testforsmarc
+
+/opt/gcc-linaro/arm-linux-gnueabihf/4.9-2015.05-x86_64/bin/arm-linux-gnueabihf-strip ../../../filesys/filesys-labim-5/usr/bin/controller
+/opt/gcc-linaro/arm-linux-gnueabihf/4.9-2015.05-x86_64/bin/arm-linux-gnueabihf-strip ../../../filesys/filesys-labim-5/usr/bin/wizard
+#/opt/gcc-linaro/arm-linux-gnueabihf/4.9-2015.05-x86_64/bin/arm-linux-gnueabihf-strip ../../../filesys/filesys-labim-5/usr/bin/testforsmarc
+
+mkdir -p /tftpboot/`whoami`/bin
+cp controller/controller /tftpboot/`whoami`/bin/controller-5
+cp wizard/wizard /tftpboot/`whoami`/bin/wizard-5
+#cp test/testforsmarc /tftpboot/`whoami`/bin/testforsmarc-5
